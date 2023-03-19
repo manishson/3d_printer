@@ -12,10 +12,10 @@ class MaterialPrediction():
         """
         to predict the material types 
         """
-        with open('artifacts\project_data.json','r') as file:
+        with open(r"artifacts/project_data.json","r") as file:
             self.project_data = json.load(file)
 
-        with open('artifacts\logi_model.pkl','rb') as file:
+        with open(r"artifacts/logi_model.pkl","rb") as file:
             self.model = pickle.load(file)
 
     def get_data(self):  # Public method 
