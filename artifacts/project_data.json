@@ -1,0 +1,1 @@
+{"columns": ["layer_height", "wall_thickness", "infill_density", "infill_pattern", "nozzle_temperature", "bed_temperature", "print_speed", "fan_speed", "roughness", "tension_strenght", "elongation"], "infill_pattern": {"grid": 0, "honeycomb": 1}}

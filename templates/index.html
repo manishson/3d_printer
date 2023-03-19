@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d printer material prediction </title>
+</head>
+<body style="background-color: beige;">
+    <h1> 3D Printer Material Prediction </h1>
+
+
+    <form action="/get_data" method="post">
+        <label>Layer Height (1 mm to 5mm):</label> <input type="number" name = 'html_layer_height'> <br><br>
+        <label>wall_thickness(1 mm to 10mm):</label> <input type="number" name = 'html_wall_thickness'> <br><br>
+        <label>infill_density(10% to 90%):</label> <input type="number" name = 'html_infill_density'> <br><br>
+
+        <label>infill_pattern:</label> 
+         <input type="radio" name = 'html_infill_pattern' value="grid"> <label>Grid</label>
+         <input type="radio" name = 'html_infill_pattern' value="honeycomb"> <label>Honeycomb</label> <br><br>
+
+        <label>nozzle_temperature(200 c to 260 c):</label> <input type="text" name = 'html_nozzle_temperature'> <br><br>
+        <label>bed_temperature(40 c to 80c):</label> <input type="number" name = 'html_bed_temperature'> <br><br>
+        <label>print_speed(40mm/s to 120mm/s):</label> <input type="number" name = 'html_print_speed'> <br><br>
+        <label>fan_speed(0% , 25%, 50%, 100%):</label> <input type="number" name = 'html_fan_speed'> <br><br>
+        <label>roughness(50 micron to 250 micron):</label> <input type="number" name = 'html_roughness'> <br><br>
+        <label>tension_strenght(10Mpa to 40 Mpa):</label> <input type="number" name = 'html_tension_strenght'> <br><br>
+        <label>elongation(1 to 4):</label> <input type="number" name = 'html_elongation'> <br><br>
+            
+        </select> <br><br>
+
+        <input type="submit" value="find the material">
+
+
+    </form><br>
+    <label>predicted printing material as per the records : </label>{{prediction}}
+    
+</body>
+</html>
